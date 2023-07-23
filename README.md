@@ -32,7 +32,11 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] simple chat between users that are locate in some region
 - [ ] search for specific day
 - [ ] add, edit, update, delete value in the database
-- [ ] clustering of the data by time and number of steps
+- [ ] clustering of the data by time in seconds and number of steps
+- [ ] filter the data for some time period
+- [ ] images with GPS coordinates to a map
+- [ ] calculate the strike in days
+- [ ] make posts like facebook
 
 <!--
 Goal Setting Functionality: Implemented goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
