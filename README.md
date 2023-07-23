@@ -32,6 +32,7 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] simple chat between users that are locate in some region
 - [ ] search for specific day
 - [ ] add, edit, update, delete value in the database
+- [ ] clustering of the data by time and number of steps
 
 <!--
 Goal Setting Functionality: Implemented goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
@@ -56,7 +57,8 @@ Intuitive Search Functionality: Implemented an intuitive search feature for user
 
 Comprehensive CRUD Operations: Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
 
-clustering of the data
+
+
 
 Modern Design with Bootstrap: Proficient in crafting stunning and user-friendly web designs using Bootstrap, ensuring a visually appealing and engaging user experience.
 
