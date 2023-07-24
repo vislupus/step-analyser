@@ -16,7 +16,7 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] Dynamic calendar that provide information about the steps taken for each day
 - [ ] Real-time weather forecasting for specific location with [OpenWeatherMap](https://openweathermap.org)
 - [ ] BMI and weight calculators featuring dynamic sliders for setting and tracking fitness goals, promoting health-conscious behavior
-- [ ] set goals for week, month, years
+- [ ] Goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
 - [ ] Dashboard page with information about the sum, mean, count and other information
 - [ ] graphics with plotly
 - [ ] interactive web map for GPX tracks
@@ -39,8 +39,6 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] make posts like facebook
 
 <!--
-Goal Setting Functionality: Implemented goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
-
 Data-driven Dashboard: Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
 
 Interactive Web Maps for GPX Tracks: Utilized advanced web mapping techniques to showcase GPX tracks interactively, enabling users to explore exciting adventures.
