@@ -36,7 +36,9 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] filter the data for some time period
 - [ ] images with GPS coordinates to a map
 - [ ] calculate the strike in days
-- [ ] make posts like facebook
+- [ ] make posts like facebook for the achievements
+- [ ] chatbot from hugging face with API
+- [ ] generating data
 
 <!--
 Data-driven Dashboard: Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
