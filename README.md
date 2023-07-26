@@ -17,9 +17,9 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] Real-time weather forecasting for specific location with [OpenWeatherMap](https://openweathermap.org)
 - [ ] BMI and weight calculators featuring dynamic sliders for setting and tracking fitness goals, promoting health-conscious behavior
 - [ ] Goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
-- [ ] Dashboard page with information about the sum, mean, count and other information
+- [ ] Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
 - [ ] graphics with plotly
-- [ ] interactive web map for GPX tracks
+- [ ] Interactive Web Maps for GPX Tracks
 - [ ] information about the length of a step from the height with option to give specific value
 - [ ] Sign Up and Sign In forms (Login/ Registration)
 - [ ] user profile that can be change
@@ -41,10 +41,6 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] generating data
 
 <!--
-Data-driven Dashboard: Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
-
-Interactive Web Maps for GPX Tracks: Utilized advanced web mapping techniques to showcase GPX tracks interactively, enabling users to explore exciting adventures.
-
 Precise Step Length Calculator: Engineered a step length calculator based on height with customizable inputs, delivering accurate measurements for fitness enthusiasts.
 
 Secure User Authentication and Profiles: Implemented secure Sign Up and Sign In forms, enabling smooth user registration and profile management for a personalized experience.
