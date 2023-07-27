@@ -20,16 +20,16 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
 - [ ] graphics with plotly
 - [ ] Interactive Web Maps for GPX Tracks
-- [ ] information about the length of a step from the height with option to give specific value
-- [ ] Sign Up and Sign In forms (Login/ Registration)
+- [ ] Engineered a step length calculator based on height with customizable inputs, delivering accurate measurements for fitness enthusiasts.
+- [ ] Implemented secure Sign Up and Sign In forms, enabling smooth user registration and profile management for a personalized experience.
 - [ ] user profile that can be change
-- [ ] image size compressor
-- [ ] PostgreSQL database of users with the steps and other information about them
-- [ ] Django Rest API
-- [ ] celery which is used for asynchronous sending an email after registration
+- [ ] Developed an image size compressor to optimize image quality and loading speed, enhancing overall website performance.
+- [ ] Utilized PostgreSQL database for storing user data
+- [ ] Django Rest API for seamless front-end and back-end communication
+- [ ] Integrated Celery to send asynchronous email notifications, ensuring timely reminders and updates reach users effectively.
 - [ ] reminder for the need of walk
 - [ ] history of sign ins with location
-- [ ] simple chat between users that are locate in some region
+- [ ] Developed a simple yet efficient chat system, enabling users in the same region to engage in real-time conversations.
 - [ ] search for specific day
 - [ ] add, edit, update, delete value in the database
 - [ ] clustering of the data by time in seconds and number of steps
@@ -41,18 +41,6 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] generating data
 
 <!--
-Precise Step Length Calculator: Engineered a step length calculator based on height with customizable inputs, delivering accurate measurements for fitness enthusiasts.
-
-Secure User Authentication and Profiles: Implemented secure Sign Up and Sign In forms, enabling smooth user registration and profile management for a personalized experience.
-
-Efficient Image Size Compressor: Developed an image size compressor to optimize image quality and loading speed, enhancing overall website performance.
-
-Robust Database and REST API: Utilized PostgreSQL database for storing user data and leveraged Django Rest API for seamless front-end and back-end communication.
-
-Asynchronous Email Notifications: Integrated Celery to send asynchronous email notifications, ensuring timely reminders and updates reach users effectively.
-
-Interactive Chat Feature: Developed a simple yet efficient chat system, enabling users in the same region to engage in real-time conversations.
-
 Intuitive Search Functionality: Implemented an intuitive search feature for users to quickly access specific information and content.
 
 Comprehensive CRUD Operations: Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
