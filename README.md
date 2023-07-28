@@ -39,6 +39,7 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] make posts like facebook for the achievements
 - [ ] chatbot from hugging face with API
 - [ ] generating data
+- [ ] infographics
 
 <!--
 Intuitive Search Functionality: Implemented an intuitive search feature for users to quickly access specific information and content.
