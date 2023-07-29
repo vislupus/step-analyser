@@ -30,8 +30,8 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] reminder for the need of walk
 - [ ] history of sign ins with location
 - [ ] Developed a simple yet efficient chat system, enabling users in the same region to engage in real-time conversations.
-- [ ] search for specific day
-- [ ] add, edit, update, delete value in the database
+- [ ] Implemented an intuitive search feature for users to quickly access specific information and content.
+- [ ] Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
 - [ ] clustering of the data by time in seconds and number of steps
 - [ ] filter the data for some time period
 - [ ] images with GPS coordinates to a map
@@ -42,13 +42,6 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] infographics
 
 <!--
-Intuitive Search Functionality: Implemented an intuitive search feature for users to quickly access specific information and content.
-
-Comprehensive CRUD Operations: Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
-
-
-
-
 Modern Design with Bootstrap: Proficient in crafting stunning and user-friendly web designs using Bootstrap, ensuring a visually appealing and engaging user experience.
 
 Interactive Menus: Developed collapsible left-side menus to optimize user immersion and navigation, resulting in a seamless browsing experience.
