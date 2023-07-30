@@ -12,7 +12,7 @@ https://github.com/narrowfail/django-channels-chat
 
 # Features
 - [ ] Modern design with BootStrap
-- [ ] Interactive menus in left that can be hide
+- [ ] Developed collapsible left-side menus to optimize user immersion and navigation, resulting in a seamless browsing experience.
 - [ ] Dynamic calendar that provide information about the steps taken for each day
 - [ ] Real-time weather forecasting for specific location with [OpenWeatherMap](https://openweathermap.org)
 - [ ] BMI and weight calculators featuring dynamic sliders for setting and tracking fitness goals, promoting health-conscious behavior
@@ -40,16 +40,9 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] chatbot from hugging face with API
 - [ ] generating data
 - [ ] infographics
+- [ ] comparison between people
 
 <!--
-Modern Design with Bootstrap: Proficient in crafting stunning and user-friendly web designs using Bootstrap, ensuring a visually appealing and engaging user experience.
-
-Interactive Menus: Developed collapsible left-side menus to optimize user immersion and navigation, resulting in a seamless browsing experience.
-
-Dynamic Calendar Integration: Successfully implemented dynamic calendars that provide step-by-step information for each day, enhancing organization and user engagement.
-
-Real-time Weather Forecasting: Utilized OpenWeatherMap API to display real-time weather forecasts for specific locations, empowering users to stay prepared for changing weather conditions.
-
 Innovative BMI and Weight Calculators: Designed interactive BMI and weight calculators featuring dynamic sliders for setting and tracking fitness goals, promoting health-conscious behavior.
 
 Goal Setting Functionality: Implemented goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
