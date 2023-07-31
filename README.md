@@ -32,21 +32,17 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] Developed a simple yet efficient chat system, enabling users in the same region to engage in real-time conversations.
 - [ ] Implemented an intuitive search feature for users to quickly access specific information and content.
 - [ ] Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
-- [ ] clustering of the data by time in seconds and number of steps
+- [ ] Leveraged data clustering algorithms to categorize and organize information effectively, enabling users to discover patterns and insights from steps data.
 - [ ] filter the data for some time period
 - [ ] images with GPS coordinates to a map
 - [ ] calculate the strike in days
-- [ ] make posts like facebook for the achievements
+- [ ] Integrated social media sharing functionalities, allowing users to effortlessly share their achievements and experiences with their network.
 - [ ] chatbot from hugging face with API
 - [ ] generating data
 - [ ] infographics
 - [ ] comparison between people
 
 <!--
-Innovative BMI and Weight Calculators: Designed interactive BMI and weight calculators featuring dynamic sliders for setting and tracking fitness goals, promoting health-conscious behavior.
-
-Goal Setting Functionality: Implemented goal-setting modules for users to set and achieve weekly, monthly, and yearly milestones, inspiring progress and personal growth.
-
 Data-driven Dashboard: Developed visually appealing dashboards presenting comprehensive insights through plots and statistical information, facilitating data analysis and decision-making.
 
 Interactive Web Maps for GPX Tracks: Utilized advanced web mapping techniques to showcase GPX tracks interactively, enabling users to explore exciting adventures.
@@ -66,14 +62,4 @@ Interactive Chat Feature: Developed a simple yet efficient chat system, enabling
 Intuitive Search Functionality: Implemented an intuitive search feature for users to quickly access specific information and content.
 
 Comprehensive CRUD Operations: Streamlined data management through comprehensive CRUD operations, allowing easy addition, editing, updating, and deletion of database values.
-
-Data Clustering: Leveraged data clustering algorithms to categorize and organize information effectively, enabling users to discover patterns and insights from complex datasets.
-
-Personalized Recommendations: Implemented intelligent recommendation systems to provide users with personalized content and suggestions, enhancing user engagement and satisfaction.
-
-Social Media Integration: Integrated social media sharing functionalities, allowing users to effortlessly share their achievements and experiences with their network.
-
-Multilingual Support: Developed language localization features to cater to a diverse global audience, making the platform accessible to users worldwide.
-
-Responsive Design: Ensured seamless user experience across various devices, utilizing responsive design principles for mobile, tablet, and desktop compatibility.
 -->
