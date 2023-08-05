@@ -41,3 +41,4 @@ https://github.com/narrowfail/django-channels-chat
 - [ ] generating data
 - [ ] infographics
 - [ ] comparison between people
+- [ ] coloring the rows on the base of the values
