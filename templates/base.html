@@ -16,25 +16,81 @@
 		<title>Steps Analyzer</title>
 	</head>
 
-	<body class="content">
-		<header>
-			<div class="content-panel">
-				<nav class="vertical-tabs">
-					<a href="{% url 'dashboard' %}" class="active"><i class="fa-solid fa-chart-line"></i><span class="nav-text">Dashboard</span></a>
-					<a href="#"><i class="fa-solid fa-calendar-days"></i><span class="nav-text">Calendar</span></a>
-					<a href="{% url 'map-people' %}"><i class="fa-solid fa-map-location-dot"></i><span class="nav-text">Map</span></a>
-					<a href="{% url 'steps-clustering' %}"><i class="fa-solid fa-circle-nodes"></i><span class="nav-text">Clustering</span></a>
-					<a href="{% url 'data-view' %}"><i class="fa-solid fa-table"></i><span class="nav-text">Data view</span></a>
-					<a href="{% url 'steps-settings' %}"><i class="fa-solid fa-sliders"></i><span class="nav-text">Settings</span></a>
-					<a href="#">Logout</a>
-					<a href="#">Login</a>
-					<a href="#">Join Now</a>
-				</nav>
+	{% comment %}
+	<body>
+		<header class="header">
+			<div class="header-content responsive-wrapper">
+				<div class="header-navigation">
+					<nav class="header-navigation-links">
+						<a href="{% url 'dashboard' %}" class="active">
+							<i class="fa-solid fa-chart-line"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+						<a href="#">
+							<i class="fa-solid fa-calendar-days"></i>
+							<span class="nav-text">Calendar</span>
+						</a>
+						<a href="{% url 'map-people' %}">
+							<i class="fa-solid fa-map-location-dot"></i>
+							<span class="nav-text">Map</span>
+						</a>
+						<a href="{% url 'steps-clustering' %}">
+							<i class="fa-solid fa-circle-nodes"></i>
+							<span class="nav-text">Clustering</span>
+						</a>
+						<a href="{% url 'data-view' %}">
+							<i class="fa-solid fa-table"></i>
+							<span class="nav-text">Data view</span>
+						</a>
+						<a href="{% url 'steps-settings' %}">
+							<i class="fa-solid fa-sliders"></i>
+							<span class="nav-text">Settings</span>
+						</a>
+						<a href="#">Logout</a>
+						<a href="#">Login</a>
+						<a href="#">Join Now</a>
+					</nav>
+				</div>
 			</div>
 		</header>
-		<main class="content-main">
-			<div class="card-grid">
-				{% block content %}{% endblock %}
+		<main class="main">
+			<div class="responsive-wrapper">
+				<div class="content">
+					<div class="content-panel">
+						<nav class="vertical-tabs">
+							<a href="{% url 'dashboard' %}" class="active">
+								<i class="fa-solid fa-chart-line"></i>
+								<span class="nav-text">Dashboard</span>
+							</a>
+							<a href="#">
+								<i class="fa-solid fa-calendar-days"></i>
+								<span class="nav-text">Calendar</span>
+							</a>
+							<a href="{% url 'map-people' %}">
+								<i class="fa-solid fa-map-location-dot"></i>
+								<span class="nav-text">Map</span>
+							</a>
+							<a href="{% url 'steps-clustering' %}">
+								<i class="fa-solid fa-circle-nodes"></i>
+								<span class="nav-text">Clustering</span>
+							</a>
+							<a href="{% url 'data-view' %}">
+								<i class="fa-solid fa-table"></i>
+								<span class="nav-text">Data view</span>
+							</a>
+							<a href="{% url 'steps-settings' %}">
+								<i class="fa-solid fa-sliders"></i>
+								<span class="nav-text">Settings</span>
+							</a>
+							<a href="#">Logout</a>
+							<a href="#">Login</a>
+							<a href="#">Join Now</a>
+						</nav>
+					</div>
+				</div>
+				<div class="content-main">
+					<div class="card-grid">{% block content %}{% endblock %}</div>
+				</div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -42,5 +98,37 @@
 				<p>&copy; Copyright {% now "Y" %} by Nikola Bozhinov</p>
 			</div>
 		</footer>
+	</body>
+	{% endcomment %}
+
+	<body>
+		<div class="wrapper">
+			<header class="main-head">
+				<nav class="main-nav">
+					<ul>
+					  <li><a href="">Nav 1</a></li>
+					  <li><a href="">Nav 2</a></li>
+					  <li><a href="">Nav 3</a></li>
+					</ul>
+				  </nav>
+			</header>
+			<nav class="main-nav">
+			  <ul>
+				<li><a href="">Nav 1</a></li>
+				<li><a href="">Nav 2</a></li>
+				<li><a href="">Nav 3</a></li>
+			  </ul>
+			</nav>
+			<article class="content">
+			  <h1>Main article area</h1>
+			  <p>
+				In this layout, we display the areas in source order for any screen less
+				that 500 pixels wide. We go to a two column layout, and then to a three
+				column layout by redefining the grid, and the placement of items on the
+				grid.
+			  </p>
+			</article>
+			<footer class="main-footer">The footer</footer>
+		  </div>
 	</body>
 </html>
