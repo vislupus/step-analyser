@@ -16,11 +16,11 @@
 		<title>Steps Analyzer</title>
 	</head>
 
-	<body>
-		<header class="header">
-			<div class="container">
-				<nav class="main-menu">
-					<a href="{% url 'dashboard' %}"><i class="fa-solid fa-chart-line"></i><span class="nav-text">Dashboard</span></a>
+	<body class="content">
+		<header>
+			<div class="content-panel">
+				<nav class="vertical-tabs">
+					<a href="{% url 'dashboard' %}" class="active"><i class="fa-solid fa-chart-line"></i><span class="nav-text">Dashboard</span></a>
 					<a href="#"><i class="fa-solid fa-calendar-days"></i><span class="nav-text">Calendar</span></a>
 					<a href="{% url 'map-people' %}"><i class="fa-solid fa-map-location-dot"></i><span class="nav-text">Map</span></a>
 					<a href="{% url 'steps-clustering' %}"><i class="fa-solid fa-circle-nodes"></i><span class="nav-text">Clustering</span></a>
@@ -32,7 +32,11 @@
 				</nav>
 			</div>
 		</header>
-		<main>{% block content %}{% endblock %}</main>
+		<main class="content-main">
+			<div class="card-grid">
+				{% block content %}{% endblock %}
+			</div>
+		</main>
 		<footer class="footer">
 			<div class="container">
 				<p>&copy; Copyright {% now "Y" %} by Nikola Bozhinov</p>
