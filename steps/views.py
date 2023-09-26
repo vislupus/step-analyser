@@ -8,20 +8,16 @@ def dashboard(request):
 
 
 def map(request):
-    pass
-    # return render(request, "steps/map.html")
+    return render(request, "steps/map.html")
 
 
 def clustering(request):
-    pass
-    # return render(request, "steps/clustering.html")
+    return render(request, "steps/clustering.html")
 
 
 def data_view(request):
-    pass
-    # return render(request, "steps/data_view.html")
+    return render(request, "steps/data_view.html")
 
 
 def steps_settings(request):
-    pass
-    # return render(request, "steps/steps_settings.html")
+    return render(request, "steps/steps_settings.html")
