@@ -1,0 +1,42 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'style.css' %}" />
+		<link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Steps Analyzer</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<nav class="main-menu">
+					<a href="{% url 'dashboard' %}"><i class="fa-solid fa-chart-line"></i><span class="nav-text">Dashboard</span></a>
+					<a href="#"><i class="fa-solid fa-calendar-days"></i><span class="nav-text">Calendar</span></a>
+					<a href="{% url 'map-people' %}"><i class="fa-solid fa-map-location-dot"></i><span class="nav-text">Map</span></a>
+					<a href="{% url 'steps-clustering' %}"><i class="fa-solid fa-circle-nodes"></i><span class="nav-text">Clustering</span></a>
+					<a href="{% url 'data-view' %}"><i class="fa-solid fa-table"></i><span class="nav-text">Data view</span></a>
+					<a href="{% url 'steps-settings' %}"><i class="fa-solid fa-sliders"></i><span class="nav-text">Settings</span></a>
+					<a href="#">Logout</a>
+					<a href="#">Login</a>
+					<a href="#">Join Now</a>
+				</nav>
+			</div>
+		</header>
+		<main>{% block content %}{% endblock %}</main>
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; Copyright {% now "Y" %} by Nikola Bozhinov</p>
+			</div>
+		</footer>
+	</body>
+</html>
