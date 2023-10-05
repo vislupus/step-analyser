@@ -11,6 +11,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 		<title>Steps Analyzer</title>
 	</head>
 
@@ -55,92 +56,74 @@
 					<div id="card-grid">
 						<article class="card item1">
 							<div class="card-header">
-								<div>
-									<h5>Avg steps per day</h5>
-								</div>
+								<p>Avg steps per day</p>
 							</div>
 							<div class="card-body">
-								<h3>11 023</h3>
+								<p>11 023</p>
 							</div>
 						</article>
 						<article class="card item2">
 							<div class="card-header">
-								<div>
-									<h5>Total steps for last week</h5>
-								</div>
+								<p>Total steps for last week</p>
 							</div>
 							<div class="card-body">
-								<h3>150 000</h3>
+								<p>150 000</p>
 							</div>
 						</article>
 						<article class="card item3">
 							<div class="card-header">
-								<div>
-									<h5>Total steps for last month</h5>
-								</div>
+								<p>Total steps for last month</p>
 							</div>
 							<div class="card-body">
-								<h3>350 000</h3>
+								<p>350 000</p>
 							</div>
 						</article>
 						<article class="card item4">
 							<div class="card-header">
-								<div>
-									<h5>Total steps so far this year</h5>
-								</div>
+								<p>Total steps so far this year</p>
 							</div>
 							<div class="card-body">
-								<h3>1 000 000</h3>
+								<p>1 000 000</p>
 							</div>
 						</article>
 						<article class="card item5">
 							<div class="card-header">
-								<div>
-									<h5>Graphic 1</h5>
-								</div>
+								<p>Graphic about steps per week</p>
 							</div>
 							<div class="card-body">
-								<p>Graphic about steps per year</p>
+								<div id="graphic-week"></div>
 							</div>
 						</article>
 						<article class="card item6">
 							<div class="card-header">
-								<div>
-									<h5>Graphic 2</h5>
-								</div>
+								<p>Graphic about steps per mount</p>
 							</div>
 							<div class="card-body">
-								<p>Graphic about steps per year</p>
+								<div id="graphic-mount"></div>
 							</div>
 						</article>
 						<article class="card item7">
 							<div class="card-header">
-								<div>
-									<h5>Graphic 3</h5>
-								</div>
+								<p>Trend line</p>
 							</div>
 							<div class="card-body">
-								<p>Graphic about steps per year</p>
+								<div id="graphic-trend"></div>
 							</div>
 						</article>
 						<article class="card item8">
 							<div class="card-header">
-								<div>
-									<h5>Graphic 4</h5>
-								</div>
+								<p>Graphic about steps per year</p>
 							</div>
 							<div class="card-body">
-								<p>Graphic about steps per year</p>
+								<div id="graphic-year"></div>
 							</div>
 						</article>
 						<article class="card item9">
 							<div class="card-header">
-								<div>
-									<h5>Graphic 5</h5>
-								</div>
+								<p>Graphic about steps per mount per year</p>
 							</div>
 							<div class="card-body">
-								<p>Graphic about steps per year</p>
+								<div id="graphic-mount-year"></div>
 							</div>
 						</article>
 					</div>
@@ -152,5 +135,119 @@
 				</div>
 			</footer>
 		</div>
+		<script>
+			var trace1 = {
+				x: [1, 2, 3, 4],
+				y: [10, 15, 13, 17],
+				mode: "markers",
+				type: "scatter",
+			};
+
+			var trace2 = {
+				x: [2, 3, 4, 5],
+				y: [16, 5, 11, 9],
+				mode: "lines",
+				type: "scatter",
+			};
+
+			var trace3 = {
+				x: [1, 2, 3, 4],
+				y: [12, 9, 15, 12],
+				mode: "lines+markers",
+				type: "scatter",
+			};
+
+			var data = [trace1, trace2, trace3];
+
+			Plotly.newPlot("graphic-trend", data);
+
+			var trace1 = {
+				x: [1, 2, 3, 4],
+				y: [5, 10, 2, 8],
+				type: "bar",
+				hovertemplate: "Value: %{y}<br>Index: %{x}",
+			};
+
+			var data = [trace1];
+
+			var layout = {
+				// title: "My Plotly.js Graphic",
+				// font: { size: 18 },
+				// width: 500,
+				// height: 500,
+				autosize: true,
+				margin: {
+					l: 50,
+					r: 50,
+					t: 50,
+					b: 50,
+				},
+			};
+
+			var config = {
+				responsive: true,
+				displayModeBar: false,
+				// modeBarButtonsToRemove: ["toImage"],
+				displaylogo: false,
+				showlegend: false,
+				staticPlot: false,
+			};
+
+			Plotly.newPlot("graphic-mount-year", data, layout, config);
+
+			var trace1 = {
+				x: ["giraffes", "orangutans", "monkeys"],
+				y: [20, 14, 23],
+				name: "SF Zoo",
+				type: "bar",
+			};
+
+			var trace2 = {
+				x: ["giraffes", "orangutans", "monkeys"],
+				y: [12, 18, 29],
+				name: "LA Zoo",
+				type: "bar",
+			};
+
+			var data = [trace1, trace2];
+
+			var layout = {
+				barmode: "group",
+			};
+
+			Plotly.newPlot("graphic-year", data, layout);
+
+			var data = [
+				{
+					x: [0, 10, 20, 30, 40, 50],
+					y: [0, 10, 20, 30, 40, 50],
+				},
+			];
+			var layout = {
+				font: {
+					size: 18,
+				},
+			};
+			var config = {
+				responsive: true,
+			};
+			Plotly.newPlot("graphic-mount", data, layout, config);
+
+			var trace1 = {
+				x: [0, 1, 2, 3, 4, 5],
+				y: [1.5, 1, 1.3, 0.7, 0.8, 0.9],
+				type: "scatter",
+			};
+
+			var trace2 = {
+				x: [0, 1, 2, 3, 4, 5],
+				y: [1, 0.5, 0.7, -1.2, 0.3, 0.4],
+				type: "bar",
+			};
+
+			var data = [trace1, trace2];
+
+			Plotly.newPlot("graphic-week", data);
+		</script>
 	</body>
 </html>
