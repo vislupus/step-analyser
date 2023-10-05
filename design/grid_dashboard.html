@@ -157,19 +157,6 @@
 				type: "scatter",
 			};
 
-			var data = [trace1, trace2, trace3];
-
-			Plotly.newPlot("graphic-trend", data);
-
-			var trace1 = {
-				x: [1, 2, 3, 4],
-				y: [5, 10, 2, 8],
-				type: "bar",
-				hovertemplate: "Value: %{y}<br>Index: %{x}",
-			};
-
-			var data = [trace1];
-
 			var layout = {
 				// title: "My Plotly.js Graphic",
 				// font: { size: 18 },
@@ -179,9 +166,10 @@
 				margin: {
 					l: 50,
 					r: 50,
-					t: 50,
+					t: 0,
 					b: 50,
 				},
+				showlegend: false,
 			};
 
 			var config = {
@@ -189,7 +177,37 @@
 				displayModeBar: false,
 				// modeBarButtonsToRemove: ["toImage"],
 				displaylogo: false,
+				staticPlot: false,
+			};
+
+			var data = [trace1, trace2, trace3];
+
+			Plotly.newPlot("graphic-trend", data,layout, config);
+
+			var trace1 = {
+				x: [1, 2, 3, 4],
+				y: [5, 10, 2, 8],
+				type: "bar",
+				hovertemplate: "X: %{x}<br>Y: %{y}",
+			};
+
+			var data = [trace1];
+
+			var layout = {
+				autosize: true,
+				margin: {
+					l: 50,
+					r: 50,
+					t: 0,
+					b: 50,
+				},
 				showlegend: false,
+			};
+
+			var config = {
+				responsive: true,
+				displayModeBar: false,
+				displaylogo: false,
 				staticPlot: false,
 			};
 
@@ -212,10 +230,25 @@
 			var data = [trace1, trace2];
 
 			var layout = {
+				autosize: true,
+				margin: {
+					l: 50,
+					r: 50,
+					t: 0,
+					b: 50,
+				},
 				barmode: "group",
+				showlegend: false,
 			};
 
-			Plotly.newPlot("graphic-year", data, layout);
+			var config = {
+				responsive: true,
+				displayModeBar: false,
+				displaylogo: false,
+				staticPlot: false,
+			};
+
+			Plotly.newPlot("graphic-year", data, layout, config);
 
 			var data = [
 				{
@@ -223,14 +256,25 @@
 					y: [0, 10, 20, 30, 40, 50],
 				},
 			];
+
 			var layout = {
-				font: {
-					size: 18,
+				autosize: true,
+				margin: {
+					l: 50,
+					r: 50,
+					t: 0,
+					b: 50,
 				},
+				showlegend: false,
 			};
+
 			var config = {
 				responsive: true,
+				displayModeBar: false,
+				displaylogo: false,
+				staticPlot: false,
 			};
+
 			Plotly.newPlot("graphic-mount", data, layout, config);
 
 			var trace1 = {
@@ -247,7 +291,25 @@
 
 			var data = [trace1, trace2];
 
-			Plotly.newPlot("graphic-week", data);
+			var layout = {
+				autosize: true,
+				margin: {
+					l: 50,
+					r: 50,
+					t: 0,
+					b: 50,
+				},
+				showlegend: false,
+			};
+
+			var config = {
+				responsive: true,
+				displayModeBar: false,
+				displaylogo: false,
+				staticPlot: false,
+			};
+
+			Plotly.newPlot("graphic-week", data, layout, config);
 		</script>
 	</body>
 </html>

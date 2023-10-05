@@ -165,7 +165,10 @@ main {
 	row-gap: 1.5rem;
 }
 
-.item1,.item2,.item3,.item4 {
+.item1,
+.item2,
+.item3,
+.item4 {
 	grid-row: 1 / 2;
 }
 .item5 {
@@ -189,7 +192,6 @@ main {
 	grid-column: 3 / 5;
 }
 
-
 .card {
 	background-color: var(--c-background-primary);
 	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
@@ -203,7 +205,7 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0.35rem 1.5rem;
+	padding: 1rem 1.5rem;
 	font-weight: 500;
 }
 .card-header div {
@@ -231,12 +233,15 @@ main {
 	font-size: 0.875rem;
 }
 
-.card:nth-of-type(n+1):nth-of-type(-n+4) .card-body{
+/* .card:nth-of-type(n + 1):nth-of-type(-n + 4) {
+	height: max-content;
+} */
+.card:nth-of-type(n + 1):nth-of-type(-n + 4) .card-body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 2.5rem;
-	color:var(--c-text-action);
+	color: var(--c-text-action);
 }
 
 .card-footer {
