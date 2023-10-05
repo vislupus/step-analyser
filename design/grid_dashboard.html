@@ -16,19 +16,19 @@
 	</head>
 
 	<body>
+		<header>
+			<h1 id="nav-title">Steps Analyzer</h1>
+			<nav id="header-nav">
+				<ul>
+					<li><a href="#">Logo</a></li>
+					<li><a href="#">Logo3</a></li>
+					<li><a href="#">Logout</a></li>
+					<li><a href="#">Login</a></li>
+					<li><a href="#">Join Now</a></li>
+				</ul>
+			</nav>
+		</header>
 		<div id="wrapper">
-			<header>
-				<h1 id="nav-title">Steps Analyzer</h1>
-				<nav id="header-nav">
-					<ul>
-						<li><a href="#">Logo</a></li>
-						<li><a href="#">Logo3</a></li>
-						<li><a href="#">Logout</a></li>
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Join Now</a></li>
-					</ul>
-				</nav>
-			</header>
 			<main>
 				<nav id="main-nav">
 					<ul>
@@ -129,18 +129,22 @@
 					</div>
 				</section>
 			</main>
-			<footer>
-				<div id="container">
-					<p>&copy; Copyright text</p>
-				</div>
-			</footer>
 		</div>
+		<footer>
+			<div id="container">
+				<p>&copy; Copyright text</p>
+			</div>
+		</footer>
 		<script>
 			var trace1 = {
 				x: [1, 2, 3, 4],
 				y: [10, 15, 13, 17],
 				mode: "markers",
 				type: "scatter",
+				marker: {
+					color: "rgb(219, 64, 82)",
+					size: 12,
+				},
 			};
 
 			var trace2 = {
@@ -148,6 +152,10 @@
 				y: [16, 5, 11, 9],
 				mode: "lines",
 				type: "scatter",
+				line: {
+					color: "rgb(55, 128, 191)",
+					width: 3,
+				},
 			};
 
 			var trace3 = {
@@ -155,6 +163,15 @@
 				y: [12, 9, 15, 12],
 				mode: "lines+markers",
 				type: "scatter",
+				marker: {
+					color: "rgb(128, 0, 128)",
+					size: 8,
+					opacity: 0.5
+				},
+				line: {
+					color: "rgb(128, 0, 128)",
+					width: 1,
+				},
 			};
 
 			var layout = {
@@ -170,6 +187,16 @@
 					b: 50,
 				},
 				showlegend: false,
+				scattermode: "group",
+				scattergap: 0.7,
+				xaxis: {
+					range: [0.9, 5.1],
+					title: "Country",
+				},
+				yaxis: {
+					// 	range: [4, 18],
+					title: "Medals",
+				},
 			};
 
 			var config = {
@@ -182,7 +209,7 @@
 
 			var data = [trace1, trace2, trace3];
 
-			Plotly.newPlot("graphic-trend", data,layout, config);
+			Plotly.newPlot("graphic-trend", data, layout, config);
 
 			var trace1 = {
 				x: [1, 2, 3, 4],
