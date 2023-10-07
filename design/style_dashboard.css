@@ -93,7 +93,7 @@ header {
 main {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	max-width: 80rem;
+	max-width: 120rem;
 	margin-inline: auto;
 	padding-inline: 1rem;
 }
