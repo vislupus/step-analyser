@@ -39,6 +39,7 @@ body {
 	gap: 1rem;
 	flex-wrap: nowrap;
 	flex-flow: column;
+	min-height: 100svh;
 }
 
 header {
@@ -171,7 +172,7 @@ main {
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-	
+
 		&:nth-of-type(n + 1):nth-of-type(-n + 4) .card-body {
 			display: flex;
 			justify-content: center;
@@ -181,7 +182,7 @@ main {
 			padding: 0.1rem 0.5rem 0.5rem 0.5rem;
 			line-height: normal;
 		}
-	
+
 		& .card-header {
 			display: flex;
 			place-content: center;
@@ -189,11 +190,11 @@ main {
 			font-size: clamp(0.5rem, 0.5vw + 0.6rem, 1.5rem);
 			font-weight: 500;
 		}
-	
+
 		& .card-body {
 			padding: 0.5rem;
 		}
-	
+
 		& .card-footer {
 			display: flex;
 			align-items: center;
@@ -201,7 +202,7 @@ main {
 			border-top: 0.1rem solid var(--c-border-primary);
 			margin-top: auto;
 			padding: 1rem 1.25rem;
-	
+
 			& a {
 				color: var(--c-text-action);
 				text-decoration: none;
@@ -224,7 +225,7 @@ main {
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		
+
 		& .card-header {
 			display: flex;
 			place-content: center;
@@ -232,13 +233,13 @@ main {
 			font-size: clamp(0.5rem, 0.5vw + 0.6rem, 1.5rem);
 			font-weight: 500;
 		}
-	
+
 		& .card-body {
 			display: flex;
 			place-content: center;
 			padding: 0;
 			line-height: normal;
-	
+
 			& img {
 				aspect-ratio: 16/9;
 				object-fit: cover;
@@ -246,7 +247,7 @@ main {
 				height: 10rem;
 			}
 		}
-	
+
 		& .card-footer {
 			display: flex;
 			align-items: center;
@@ -258,6 +259,62 @@ main {
 	}
 }
 
+#data-table {
+	& table {
+		width: 100%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		overflow: hidden;
+	}
+
+	& thead {
+		background-color: var(--color-gray);
+
+		& th {
+			padding: 0.8rem;
+			text-align: left;
+			font-weight: 500;
+			font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1.2rem);
+			color: var(--c-text-primary);
+			text-transform: uppercase;
+		}
+	}
+
+	& tbody {
+		border: 0.1rem solid var(--c-border-primary);
+
+		& td {
+			padding: 1rem;
+			text-align: left;
+			vertical-align: middle;
+			font-weight: 300;
+			font-size: clamp(0.8rem, 0.5vw + 0.5rem, 1.2rem);
+			color: var(--c-text-primary);
+			border-bottom: solid 0.1rem var(--c-border-primary);
+			position: relative;
+
+			&:hover::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -1000rem;
+				bottom: -1000rem;
+				background-color: var(--c-border-primary);
+				z-index: -1;
+			}
+
+			&:hover {
+				background-color: var(--c-accent-primary);
+				color: var(--c-background-primary);
+			}
+		}
+
+		& tr:hover {
+			background-color: var(--c-border-primary);
+		}
+	}
+}
 
 footer {
 	display: flex;
@@ -267,6 +324,7 @@ footer {
 	height: 3rem;
 	border-top: 0.1rem solid var(--c-border-primary);
 	background-color: var(--c-background-primary);
+	margin-top: auto;
 }
 
 @media (max-width: 80em) {
