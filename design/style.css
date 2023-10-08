@@ -267,7 +267,7 @@ main {
 		overflow: hidden;
 	}
 
-	& thead {
+	& .table-header {
 		background-color: var(--color-gray);
 
 		& th {
@@ -280,7 +280,9 @@ main {
 		}
 	}
 
-	& tbody {
+	& .table-content {
+		overflow-x: auto;
+		height: 75svh;
 		border: 0.1rem solid var(--c-border-primary);
 
 		& tr:hover {
