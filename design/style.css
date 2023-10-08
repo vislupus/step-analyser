@@ -283,6 +283,10 @@ main {
 	& tbody {
 		border: 0.1rem solid var(--c-border-primary);
 
+		& tr:hover {
+			background-color: var(--c-border-primary);
+		}
+
 		& td {
 			padding: 1rem;
 			text-align: left;
@@ -292,6 +296,11 @@ main {
 			color: var(--c-text-primary);
 			border-bottom: solid 0.1rem var(--c-border-primary);
 			position: relative;
+
+			&:hover {
+				background-color: var(--c-accent-primary);
+				color: var(--c-background-primary);
+			}
 
 			&:hover::before {
 				content: "";
@@ -303,15 +312,6 @@ main {
 				background-color: var(--c-border-primary);
 				z-index: -1;
 			}
-
-			&:hover {
-				background-color: var(--c-accent-primary);
-				color: var(--c-background-primary);
-			}
-		}
-
-		& tr:hover {
-			background-color: var(--c-border-primary);
 		}
 	}
 }
