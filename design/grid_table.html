@@ -64,36 +64,42 @@
 					<div class="labels" id="label-dates">
 						<label>
 							<span id="start-date">Star date:</span>
-							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
 							<span class="validity"></span>
 						</label>
 						<label>
 							<span id="end-date">End date:</span>
-							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
 							<span class="validity"></span>
 						</label>
 					</div>
 					<div class="labels" id="label-body">
 						<label>
 							<span id="start-date">Height (cm):</span>
-							<input type="number" name="height" value="0"/>
+							<input type="number" name="height" value="170" required />
 							<span class="validity"></span>
 						</label>
 						<label>
 							<span id="end-date">Length step (cm):</span>
-							<input type="number" name="length-step" value="0"/>
+							<input type="number" name="length-step" value="50" required />
 							<span class="validity"></span>
 						</label>
 					</div>
 					<div class="labels" id="label-activity">
 						<label>
 							<span id="start-date">Avg steps per day:</span>
-							<input type="number" name="avg-steps" value="0"/>
+							<input type="number" name="avg-steps" value="3500" required />
 							<span class="validity"></span>
 						</label>
 						<label>
 							<span id="end-date">Active:</span>
-							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<select>
+								<option value="not-active">Not active</option>
+								<option value="lightly-active">Lightly active</option>
+								<option value="active" selected>Active</option>
+								<option value="moderately-active">Moderately active</option>
+								<option value="very-active" >Very active</option>
+							  </select>
 							<span class="validity"></span>
 						</label>
 					</div>
