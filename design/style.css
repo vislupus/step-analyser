@@ -295,7 +295,7 @@ main {
 
 	& .table-content {
 		overflow-x: auto;
-		height: 78svh;
+		height: 68svh;
 		border: 0.1rem solid var(--c-border-primary);
 
 		& tr:hover {
@@ -362,7 +362,7 @@ main {
 	justify-content: space-around;
 	flex-wrap: nowrap;
 	flex-direction: row;
-	padding: 1rem;
+	padding: 0.3rem 1rem;
 
 	& .labels {
 		& label {
@@ -419,7 +419,7 @@ main {
 
 		& input:valid:not(:focus) + span::before {
 			font-size: 1.2rem;
-			content: "✖";
+			content: "✓";
 			visibility: hidden;
 			padding: 0.3rem;
 		}
