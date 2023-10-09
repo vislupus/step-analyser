@@ -272,11 +272,24 @@ main {
 
 		& th {
 			padding: 0.8rem;
-			text-align: left;
+			text-align: center;
 			font-weight: 500;
 			font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1.2rem);
 			color: var(--c-text-primary);
 			text-transform: uppercase;
+			width: 7%;
+
+			&:last-child {
+				width: 7.7%;
+
+				@media (max-width: 80em) {
+					width: 7.9%;
+				}
+
+				@media (max-width: 50em) {
+					width: 8.3%;
+				}
+			}
 		}
 	}
 
@@ -291,20 +304,45 @@ main {
 
 		& td {
 			padding: 1rem;
-			text-align: left;
+			text-align: center;
 			vertical-align: middle;
 			font-weight: 300;
-			font-size: clamp(0.8rem, 0.5vw + 0.5rem, 1.2rem);
+			font-size: clamp(0.5rem, 0.5vw + 0.5rem, 1.2rem);
 			color: var(--c-text-primary);
 			border-bottom: solid 0.1rem var(--c-border-primary);
 			position: relative;
+			width: 7%;
 
-			&:hover {
+			@media (max-width: 80em) {
+				padding: 0.6rem 0.1rem;
+			}
+
+			@media (max-width: 50em) {
+				padding: 0.8rem 0.1rem;
+			}
+
+			&:nth-last-child(-n + 2) {
+				width: 3.5%;
+
+				& a {
+					font-size: clamp(0.5rem, 0.5vw + 0.5rem, 1rem);
+					text-decoration: none;
+					text-align: center;
+					font-weight: 500;
+					color: var(--c-text-primary);
+				}
+			}
+
+			&:last-child a {
+				color: var(--color-primary);
+			}
+
+			&:not(:nth-last-child(-n + 2)):hover {
 				background-color: var(--c-accent-primary);
 				color: var(--c-background-primary);
 			}
 
-			&:hover::before {
+			&:not(:nth-last-child(-n + 2)):hover::before {
 				content: "";
 				position: absolute;
 				left: 0;
@@ -403,11 +441,12 @@ footer {
 				z-index: 10;
 			}
 		}
+
+		& .fa-solid {
+			font-size: 1.2rem;
+		}
 	}
 
-	.fa-solid {
-		font-size: 1.2rem;
-	}
 
 	.nav-text {
 		display: inline-block;
