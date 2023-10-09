@@ -60,14 +60,55 @@
 				</ul>
 			</nav>
 			<section id="content">
+				<form id="generate-data">
+					<div class="labels" id="label-dates">
+						<label>
+							<span id="start-date">Star date:</span>
+							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<span class="validity"></span>
+						</label>
+						<label>
+							<span id="end-date">End date:</span>
+							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<span class="validity"></span>
+						</label>
+					</div>
+					<div class="labels" id="label-body">
+						<label>
+							<span id="start-date">Height (cm):</span>
+							<input type="number" name="height" value="0"/>
+							<span class="validity"></span>
+						</label>
+						<label>
+							<span id="end-date">Length step (cm):</span>
+							<input type="number" name="length-step" value="0"/>
+							<span class="validity"></span>
+						</label>
+					</div>
+					<div class="labels" id="label-activity">
+						<label>
+							<span id="start-date">Avg steps per day:</span>
+							<input type="number" name="avg-steps" value="0"/>
+							<span class="validity"></span>
+						</label>
+						<label>
+							<span id="end-date">Active:</span>
+							<input type="date" name="party" min="2000-01-01" max="2023-12-31" />
+							<span class="validity"></span>
+						</label>
+					</div>
+
+					<button id="button-filter">Filter</button>
+					<button id="button-generate">Generate</button>
+				</form>
 				<div id="data-table">
 					<div class="table-header">
 						<table>
 							<thead>
 								<tr>
-									<th>Date</th>
-									<th>Steps</th>
-									<th>Time</th>
+									<th>Date <i class="fa-solid fa-sort-up"></i></th>
+									<th>Steps <i class="fa-solid fa-sort-down"></i></th>
+									<th>Time <i class="fa-solid fa-sort"></i></th>
 									<th>Distance</th>
 									<th>Speed</th>
 									<th>Calories</th>
