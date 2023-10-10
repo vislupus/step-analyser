@@ -1,0 +1,48 @@
+<nav id="main-nav">
+    <p>{{ request.path }}</p>
+    <ul>
+        <li>
+            <a href="{% url "dashboard" %}" {% if request.path == '/' %}class="active"{% endif %}>
+                <i class="fa-solid fa-chart-line"></i><span class="nav-text">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url "data-view" %}" {% if request.path == '/data-view/' %}class="active"{% endif %}>
+                <i class="fa-solid fa-table"></i><span class="nav-text">Data table</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-calendar-days"></i><span class="nav-text">Calendar</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-circle-nodes"></i><span class="nav-text">Clustering</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url "trips" %}" {% if request.path == '/trips/' %}class="active"{% endif %}>
+                <i class="fa-solid fa-mountain-sun"></i><span class="nav-text">Trips</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-map-location-dot"></i><span class="nav-text">Tourist attractions</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-earth-europe"></i><span class="nav-text">Visited countries</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa-solid fa-sliders"></i><span class="nav-text">Settings</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+{% block main-nav %}{% endblock %}
+			
