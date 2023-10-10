@@ -299,7 +299,7 @@ main {
 
 	& .table-content {
 		overflow-x: auto;
-		height: 68svh;
+		height: 60svh;
 		border: 0.1rem solid var(--c-border-primary);
 
 		& tr:hover {
@@ -464,18 +464,18 @@ main {
 		max-width: fit-content;
 	}
 
+	& input:invalid:not(:focus) + span::before {
+		font-size: 1.2rem;
+		content: "✖";
+		visibility: hidden;
+		padding: 0.3rem;
+	}
+
 	& input:invalid:focus + span::after {
 		font-size: 1.2rem;
 		content: "✖";
 		color: var(--color-error);
 		visibility: visible;
-		padding: 0.3rem;
-	}
-
-	& input:invalid:not(:focus) + span::before {
-		font-size: 1.2rem;
-		content: "✖";
-		visibility: hidden;
 		padding: 0.3rem;
 	}
 
@@ -494,7 +494,9 @@ main {
 		padding: 0.3rem;
 	}
 
-	&:is(#label-dates, #label-body, #label-activity) {
+	#label-dates,
+	#label-body,
+	#label-activity {
 		display: flex;
 		justify-content: start;
 		flex-wrap: nowrap;
