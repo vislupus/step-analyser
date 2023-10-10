@@ -94,7 +94,6 @@ header {
 main {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	/* max-width: 120rem; */
 	margin-inline: 5rem;
 	padding-right: 1rem;
 }
@@ -123,10 +122,17 @@ main {
 		color: var(--c-text-action);
 		transition: 0.15s ease;
 
-		&:is(:hover, .active) {
+		&:hover {
+			color: var(--c-text-action);
+		background-color: var(--c-background-quaternary);
+		}
+
+		&.active {
 			background-color: var(--c-background-tertiary);
 			color: var(--c-accent-primary);
 		}
+
+
 	}
 }
 
@@ -468,6 +474,72 @@ main {
 		text-decoration: none;
 		border-radius: 0.3rem;
 		border: 0.1rem solid var(--c-text-secondary);
+	}
+}
+
+.tab-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto 1fr;
+	margin-bottom: 1rem;
+	color: var(--c-text-action);
+
+	& input {
+		display: none;
+	}
+
+	& input:checked + label {
+		color: var(--c-accent-primary);
+		background-color: var(--c-background-tertiary);
+		font-weight: 500;
+		transition: all 250ms;
+	}
+
+	& input:not(:checked) + label {
+		color: var(--c-text-secondary);
+		background-color: var(--c-background-quaternary);
+		font-weight: 500;
+		transition: all 250ms;
+	}
+
+	& label {
+		cursor: pointer;
+		text-align: center;
+		font-weight: 500;
+		transition: color 250ms;
+		padding: 1em;
+		border-top: 0.1rem solid var(--c-border-primary);
+		border-left: 0.1rem solid var(--c-border-primary);
+		border-right: 0.1rem solid var(--c-border-primary);
+		border-radius: 0.5rem 0.5rem 0rem 0rem;
+		background-color: var(--c-background-secondary);
+		transition: all 250ms;
+
+		&:last-of-type {
+			border: none;
+		}
+		
+		&:hover {
+			color: var(--c-text-action);
+			background-color: var(--c-background-tertiary);
+		}
+	}
+
+	& .tab-content {
+		display: grid;
+		grid-column: 1 / -1;
+		padding: 0.3rem;
+		border-bottom: 0.1rem solid var(--c-border-primary);
+		border-left: 0.1rem solid var(--c-border-primary);
+		border-right: 0.1rem solid var(--c-border-primary);
+		border-radius: 0rem 0rem 0.5rem 0.5rem;
+		background-color: var(--c-background-tertiary);
+	}
+
+	& input#tab01:checked ~ .tab-content:not(:nth-of-type(1)),
+	& input#tab02:checked ~ .tab-content:not(:nth-of-type(2)),
+	& input#tab03:checked ~ .tab-content:not(:nth-of-type(3)) {
+		display: none;
 	}
 }
 

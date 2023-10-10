@@ -60,7 +60,7 @@
 				</ul>
 			</nav>
 			<section id="content">
-				<form id="generate-data">
+				<!-- <form id="generate-data">
 					<div class="labels" id="label-dates">
 						<label>
 							<span id="start-date">Star date:</span>
@@ -98,15 +98,39 @@
 								<option value="lightly-active">Lightly active</option>
 								<option value="active" selected>Active</option>
 								<option value="moderately-active">Moderately active</option>
-								<option value="very-active" >Very active</option>
-							  </select>
+								<option value="very-active">Very active</option>
+							</select>
 							<span class="validity"></span>
 						</label>
 					</div>
 
 					<button id="button-filter">Filter</button>
 					<button id="button-generate">Generate</button>
-				</form>
+				</form> -->
+				<div class="tab-container">
+						<input type="radio" id="tab01" name="tabs" value="1" checked />
+						<label for="tab01" checked="checked">Add new record</label>
+
+						<input type="radio" id="tab02" name="tabs" value="2" />
+						<label for="tab02">Filter data</label>
+
+						<input type="radio" id="tab03" name="tabs" value="3" />
+						<label for="tab03">Generate new data</label>
+
+						<div class="tab-content">
+							<p>TAB [ <tab-number>01</tab-number> ] content</p>
+							<p>CSS...</p>
+						</div>
+						<div class="tab-content">
+							<p>TAB [ <tab-number>02</tab-number> ] content</p>
+							<p>CSS Grid...</p>
+						</div>
+						<div class="tab-content">
+							<p>TAB [ <tab-number>03</tab-number> ] content</p>
+							<p>CSS Grid is the...</p>
+						</div>
+					</div>
+				</div>
 				<div id="data-table">
 					<div class="table-header">
 						<table>
