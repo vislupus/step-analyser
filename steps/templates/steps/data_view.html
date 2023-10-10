@@ -1,5 +1,496 @@
-{% extends "base.html" %}
-  
+{% extends "base.html" %} 
+
+{% block page_title %} Data view {%endblock%} 
+
 {% block content %}
-    <h1>Data view</h1>
+    {% include "steps/includes/header.html" %}
+
+    <section id="content">
+        <div class="tab-container">
+            <input type="radio" class="tabs" id="tab01" name="tabs" value="1" checked />
+            <label class="tabs-title" for="tab01" checked="checked">Add new record</label>
+
+            <input type="radio" class="tabs" id="tab02" name="tabs" value="2" />
+            <label class="tabs-title" for="tab02">Filter data</label>
+
+            <input type="radio" class="tabs" id="tab03" name="tabs" value="3" />
+            <label class="tabs-title" for="tab03">Generate new data</label>
+
+            <div class="tab-content">
+                <form id="generate-data">
+                    <div class="labels" id="label-dates">
+                        <label>
+                            <span id="start-date">Star date:</span>
+                            <input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">End date:</span>
+                            <input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-body">
+                        <label>
+                            <span id="start-date">Height (cm):</span>
+                            <input type="number" name="height" value="170" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Length of step (cm):</span>
+                            <input type="number" name="length-step" value="50" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-activity">
+                        <label>
+                            <span id="start-date">Avg steps per day:</span>
+                            <input type="number" name="avg-steps" value="3500" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Active:</span>
+                            <select>
+                                <option value="not-active">Not active</option>
+                                <option value="lightly-active">Lightly active</option>
+                                <option value="active" selected>Active</option>
+                                <option value="moderately-active">Moderately active</option>
+                                <option value="very-active">Very active</option>
+                            </select>
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+
+                    <button id="button-generate">Generate</button>
+                </form>
+            </div>
+            <div class="tab-content">
+                <form id="generate-data">
+                    <div class="labels" id="label-dates">
+                        <label>
+                            <span id="start-date">Star date:</span>
+                            <input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">End date:</span>
+                            <input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-body">
+                        <label>
+                            <span id="start-date">Height (cm):</span>
+                            <input type="number" name="height" value="170" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Length of step (cm):</span>
+                            <input type="number" name="length-step" value="50" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-activity">
+                        <label>
+                            <span id="start-date">Avg steps per day:</span>
+                            <input type="number" name="avg-steps" value="3500" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Active:</span>
+                            <select>
+                                <option value="not-active">Not active</option>
+                                <option value="lightly-active">Lightly active</option>
+                                <option value="active" selected>Active</option>
+                                <option value="moderately-active">Moderately active</option>
+                                <option value="very-active">Very active</option>
+                            </select>
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+
+                    <button id="button-generate">Generate</button>
+                </form>
+            </div>
+            <div class="tab-content">
+                <form id="generate-data">
+                    <div class="labels" id="label-dates">
+                        <label>
+                            <span id="start-date">Star date:</span>
+                            <input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">End date:</span>
+                            <input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-body">
+                        <label>
+                            <span id="start-date">Height (cm):</span>
+                            <input type="number" name="height" value="170" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Length of step (cm):</span>
+                            <input type="number" name="length-step" value="50" required />
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+                    <div class="labels" id="label-activity">
+                        <label>
+                            <span id="start-date">Avg steps per day:</span>
+                            <input type="number" name="avg-steps" value="3500" required />
+                            <span class="validity"></span>
+                        </label>
+                        <label>
+                            <span id="end-date">Active:</span>
+                            <select>
+                                <option value="not-active">Not active</option>
+                                <option value="lightly-active">Lightly active</option>
+                                <option value="active" selected>Active</option>
+                                <option value="moderately-active">Moderately active</option>
+                                <option value="very-active">Very active</option>
+                            </select>
+                            <span class="validity"></span>
+                        </label>
+                    </div>
+
+                    <button id="button-generate">Generate</button>
+                </form>
+            </div>
+        </div>
+        <div id="data-table">
+            <div class="table-header">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date <i class="fa-solid fa-sort-up"></i></th>
+                            <th>Steps <i class="fa-solid fa-sort-down"></i></th>
+                            <th>Time <i class="fa-solid fa-sort"></i></th>
+                            <th>Distance</th>
+                            <th>Speed</th>
+                            <th>Calories</th>
+                            <th colspan="2">Utilities</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-content">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>21.01.2021</td>
+                            <td>11234</td>
+                            <td>01:23:23</td>
+                            <td>14500</td>
+                            <td>6.54</td>
+                            <td>654</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.01.2021</td>
+                            <td>16234</td>
+                            <td>02:23:23</td>
+                            <td>17500</td>
+                            <td>7.54</td>
+                            <td>854</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen"></i></a>
+                            </td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
 {% endblock %}
