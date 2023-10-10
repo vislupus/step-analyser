@@ -1,5 +1,4 @@
 <nav id="main-nav">
-    <p>{{ request.path }}</p>
     <ul>
         <li>
             <a href="{% url "dashboard" %}" {% if request.path == '/' %}class="active"{% endif %}>
@@ -12,12 +11,12 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{% url "calendar" %}" {% if request.path == '/calendar/' %}class="active"{% endif %}>
                 <i class="fa-solid fa-calendar-days"></i><span class="nav-text">Calendar</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{% url "clustering" %}" {% if request.path == '/clustering/' %}class="active"{% endif %}>
                 <i class="fa-solid fa-circle-nodes"></i><span class="nav-text">Clustering</span>
             </a>
         </li>
@@ -27,17 +26,17 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{% url "tourist-attractions" %}" {% if request.path == '/tourist-attractions/' %}class="active"{% endif %}>
                 <i class="fa-solid fa-map-location-dot"></i><span class="nav-text">Tourist attractions</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{% url "visited-countries" %}" {% if request.path == '/visited-countries/' %}class="active"{% endif %}>
                 <i class="fa-solid fa-earth-europe"></i><span class="nav-text">Visited countries</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{% url "settings" %}" {% if request.path == '/settings/' %}class="active"{% endif %}>
                 <i class="fa-solid fa-sliders"></i><span class="nav-text">Settings</span>
             </a>
         </li>
