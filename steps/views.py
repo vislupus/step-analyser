@@ -1,10 +1,10 @@
 from django.shortcuts import render
-from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 
 
 def dashboard(request):
-    return render(request, "steps/index.html")
+    return render(request, "steps/dashboard.html")
 
 
 def map(request):
@@ -17,6 +17,9 @@ def clustering(request):
 
 def data_view(request):
     return render(request, "steps/data_view.html")
+
+def trips(request):
+    return HttpResponse("Trips")
 
 
 def steps_settings(request):
