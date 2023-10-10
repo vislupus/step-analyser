@@ -124,15 +124,13 @@ main {
 
 		&:hover {
 			color: var(--c-text-action);
-		background-color: var(--c-background-quaternary);
+			background-color: var(--c-background-quaternary);
 		}
 
 		&.active {
-			background-color: var(--c-background-tertiary);
 			color: var(--c-accent-primary);
+			background-color: var(--c-background-tertiary);
 		}
-
-
 	}
 }
 
@@ -479,6 +477,7 @@ main {
 
 .tab-container {
 	display: grid;
+	column-gap: 0.3rem;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto 1fr;
 	margin-bottom: 1rem;
@@ -489,6 +488,7 @@ main {
 	}
 
 	& input:checked + label {
+		font-size: clamp(1rem, 0.5vw + 0.5rem, 2rem);
 		color: var(--c-accent-primary);
 		background-color: var(--c-background-tertiary);
 		font-weight: 500;
@@ -496,9 +496,10 @@ main {
 	}
 
 	& input:not(:checked) + label {
+		font-size: clamp(1rem, 0.5vw + 0.5rem, 2rem);
+		font-weight: 500;
 		color: var(--c-text-secondary);
 		background-color: var(--c-background-quaternary);
-		font-weight: 500;
 		transition: all 250ms;
 	}
 
@@ -507,22 +508,13 @@ main {
 		text-align: center;
 		font-weight: 500;
 		transition: color 250ms;
-		padding: 1em;
+		padding: 0.6em;
 		border-top: 0.1rem solid var(--c-border-primary);
 		border-left: 0.1rem solid var(--c-border-primary);
 		border-right: 0.1rem solid var(--c-border-primary);
 		border-radius: 0.5rem 0.5rem 0rem 0rem;
 		background-color: var(--c-background-secondary);
 		transition: all 250ms;
-
-		&:last-of-type {
-			border: none;
-		}
-		
-		&:hover {
-			color: var(--c-text-action);
-			background-color: var(--c-background-tertiary);
-		}
 	}
 
 	& .tab-content {
