@@ -1,11 +1,89 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    Dashboard
+{%endblock%}
   
 {% block content %}
-    <article class="card">
-        <div class="card-header">
-            <div>
-                <h3>Steps</h3>
-            </div>
+    {% include "steps/includes/header.html" %}
+
+    <section id="content">
+        <div id="card-grid-dashboard">
+            <article class="card item1">
+                <div class="card-header">
+                    <p>Avg steps per day</p>
+                </div>
+                <div class="card-body">
+                    <p>11 023</p>
+                </div>
+            </article>
+            <article class="card item2">
+                <div class="card-header">
+                    <p>Total steps for last week</p>
+                </div>
+                <div class="card-body">
+                    <p>150 000</p>
+                </div>
+            </article>
+            <article class="card item3">
+                <div class="card-header">
+                    <p>Total steps for last month</p>
+                </div>
+                <div class="card-body">
+                    <p>350 000</p>
+                </div>
+            </article>
+            <article class="card item4">
+                <div class="card-header">
+                    <p>Total steps so far this year</p>
+                </div>
+                <div class="card-body">
+                    <p>1 000 000</p>
+                </div>
+            </article>
+            <article class="card item5">
+                <div class="card-header">
+                    <p>Graphic about steps per week</p>
+                </div>
+                <div class="card-body">
+                    <div id="graphic-week"></div>
+                </div>
+            </article>
+            <article class="card item6">
+                <div class="card-header">
+                    <p>Graphic about steps per mount</p>
+                </div>
+                <div class="card-body">
+                    <div id="graphic-mount"></div>
+                </div>
+            </article>
+            <article class="card item7">
+                <div class="card-header">
+                    <p>Trend line</p>
+                </div>
+                <div class="card-body">
+                    <div id="graphic-trend"></div>
+                </div>
+            </article>
+            <article class="card item8">
+                <div class="card-header">
+                    <p>Graphic about steps per year</p>
+                </div>
+                <div class="card-body">
+                    <div id="graphic-year"></div>
+                </div>
+            </article>
+            <article class="card item9">
+                <div class="card-header">
+                    <p>Graphic about steps per mount per year</p>
+                </div>
+                <div class="card-body">
+                    <div id="graphic-mount-year"></div>
+                </div>
+            </article>
         </div>
-    </article>
+    </section>
+
+    <script src="{% static 'plots.js' %}"></script>
 {% endblock %}
