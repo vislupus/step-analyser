@@ -119,12 +119,100 @@
 							</form>
 						</div>
 						<div class="tab-content">
-							<p>TAB [ <tab-number>02</tab-number> ] content</p>
-							<p>CSS Grid...</p>
+							<form id="generate-data">
+								<div class="labels" id="label-dates">
+									<label>
+										<span id="start-date">Star date:</span>
+										<input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">End date:</span>
+										<input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
+										<span class="validity"></span>
+									</label>
+								</div>
+								<div class="labels" id="label-body">
+									<label>
+										<span id="start-date">Height (cm):</span>
+										<input type="number" name="height" value="170" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">Length of step (cm):</span>
+										<input type="number" name="length-step" value="50" required />
+										<span class="validity"></span>
+									</label>
+								</div>
+								<div class="labels" id="label-activity">
+									<label>
+										<span id="start-date">Avg steps per day:</span>
+										<input type="number" name="avg-steps" value="3500" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">Active:</span>
+										<select>
+											<option value="not-active">Not active</option>
+											<option value="lightly-active">Lightly active</option>
+											<option value="active" selected>Active</option>
+											<option value="moderately-active">Moderately active</option>
+											<option value="very-active">Very active</option>
+										</select>
+										<span class="validity"></span>
+									</label>
+								</div>
+
+								<button id="button-generate">Generate</button>
+							</form>
 						</div>
 						<div class="tab-content">
-							<p>TAB [ <tab-number>03</tab-number> ] content</p>
-							<p>CSS Grid is the...</p>
+							<form id="generate-data">
+								<div class="labels" id="label-dates">
+									<label>
+										<span id="start-date">Star date:</span>
+										<input type="date" name="start-date" min="2000-01-01" max="2023-12-31" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">End date:</span>
+										<input type="date" name="end-date" min="2000-01-01" max="2023-12-31" required />
+										<span class="validity"></span>
+									</label>
+								</div>
+								<div class="labels" id="label-body">
+									<label>
+										<span id="start-date">Height (cm):</span>
+										<input type="number" name="height" value="170" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">Length of step (cm):</span>
+										<input type="number" name="length-step" value="50" required />
+										<span class="validity"></span>
+									</label>
+								</div>
+								<div class="labels" id="label-activity">
+									<label>
+										<span id="start-date">Avg steps per day:</span>
+										<input type="number" name="avg-steps" value="3500" required />
+										<span class="validity"></span>
+									</label>
+									<label>
+										<span id="end-date">Active:</span>
+										<select>
+											<option value="not-active">Not active</option>
+											<option value="lightly-active">Lightly active</option>
+											<option value="active" selected>Active</option>
+											<option value="moderately-active">Moderately active</option>
+											<option value="very-active">Very active</option>
+										</select>
+										<span class="validity"></span>
+									</label>
+								</div>
+
+								<button id="button-generate">Generate</button>
+							</form>
 						</div>
 					</div>
 				</div>

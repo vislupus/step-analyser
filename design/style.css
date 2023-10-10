@@ -506,23 +506,21 @@ main {
 	}
 
 	& button {
+		width: 10rem;
 		margin: 0.5rem;
-		padding: 0.5rem;
+		padding: 0.8rem;
 		font-size: 1rem;
 		text-decoration: none;
-		border-radius: 0.3rem;
+		border-radius: 0.5rem;
+		color: var(--c-text-primary);
 		background-color: var(--c-background-secondary);
 		border: 0.1rem solid var(--c-border-primary);
 	}
 
 	& button:hover {
-		margin: 0.5rem;
-		padding: 0.5rem;
-		font-size: 1rem;
-		text-decoration: none;
-		border-radius: 0.3rem;
-		background-color: var(--c-border-primary);
-		border: 0.1rem solid var(--c-border-primary);
+		font-weight: 600;
+		color: var(--c-text-action);
+		background-color: var(--c-background-quaternary);
 	}
 }
 
